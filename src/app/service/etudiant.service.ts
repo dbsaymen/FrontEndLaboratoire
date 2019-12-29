@@ -10,8 +10,8 @@ export class EtudiantService {
 
   constructor(private http: HttpClient) { }
 
-  addEnseignant(etudiant:Etudiant){
-    return this.http.post<Etudiant>(environment.baseUrl + "/membres/etudiant",etudiant,{
+  addEtudiant(etudiant:Etudiant){
+    return this.http.post<Etudiant>(environment.baseUrl + "/members/etudiant",etudiant,{
       headers:new HttpHeaders({
           'content-type':'application/json'
       })
@@ -19,7 +19,7 @@ export class EtudiantService {
   }
 
   update(etudiant:Etudiant){
-    return this.http.put<Etudiant>(environment.baseUrl + "/membres/etudiant/"+etudiant.id,etudiant,{
+    return this.http.put<Etudiant>(environment.baseUrl + "/members/etudiant/"+etudiant.publicID,etudiant,{
       headers:new HttpHeaders({
           'content-type':'application/json'
     })
@@ -27,6 +27,6 @@ export class EtudiantService {
   }
 
   findByDiplome(diplome:string){
-    return this.http.get(environment.baseUrl+"/membre/search/diplome",{params:{diplome:diplome}});
+    return this.http.get(environment.baseUrl+"/members/search/diplome",{params:{diplome:diplome}});
   }
 }

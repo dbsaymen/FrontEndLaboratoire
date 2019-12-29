@@ -10,7 +10,7 @@ export class EnseignantChercheurService {
   constructor(private http: HttpClient) { }
 
   addEnseignant(enseignant:EnseignantChercheur){
-    return this.http.post<EnseignantChercheur>(environment.baseUrl + "/membres/enseignant",enseignant,{
+    return this.http.post<EnseignantChercheur>(environment.baseUrl + "/members/enseignant",enseignant,{
       headers:new HttpHeaders({
           'content-type':'application/json'
       })
@@ -18,7 +18,7 @@ export class EnseignantChercheurService {
   }
 
   update(enseignant:EnseignantChercheur){
-    return this.http.put<EnseignantChercheur>(environment.baseUrl + "/membres/enseignant/"+enseignant.id,enseignant,{
+    return this.http.put<EnseignantChercheur>(environment.baseUrl + "/members/enseignant/"+enseignant.publicID,enseignant,{
       headers:new HttpHeaders({
           'content-type':'application/json'
       })
@@ -26,10 +26,10 @@ export class EnseignantChercheurService {
   }
 
   findByGrade(grade:string){
-    return this.http.get(environment.baseUrl+"/membre/search/grade",{params:{grade:grade}});
+    return this.http.get(environment.baseUrl+"/members/search/grade",{params:{grade:grade}});
   }
 
   findByEtablissement(etablissement:string){
-    return this.http.get(environment.baseUrl+"/membre/search/etablissement",{params:{etablissement:etablissement}});
+    return this.http.get(environment.baseUrl+"/members/search/etablissement",{params:{etablissement:etablissement}});
   }
 }

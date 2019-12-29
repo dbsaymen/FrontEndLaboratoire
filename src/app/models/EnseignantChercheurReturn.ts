@@ -1,7 +1,7 @@
+import { MembreReturn } from './MembreReturn';
 import { Etudiant } from './Etudiant';
-import { Membre } from './Membre';
 
-export class EnseignantChercheur extends Membre{
+export class EnseignantChercheurReturn extends MembreReturn{
     constructor(){
         super();
     }
@@ -9,3 +9,4 @@ export class EnseignantChercheur extends Membre{
     grade:string;
     encadre:Etudiant[]; 
 }
+

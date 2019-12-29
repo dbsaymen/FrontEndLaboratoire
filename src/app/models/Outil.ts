@@ -6,5 +6,5 @@ export class Outil{
     nom:string;
     source:string;
     date:Date;
-    listDeveloppeurs:Membre[];
+    developpeurs:Membre[];
 }

@@ -7,5 +7,5 @@ export class Publication{
     dateApparition:Date;
     lien:string;
     sourcePdf:string;
-    listAuteurs:Membre[];
+    auteurs:Membre[];
 }
