@@ -1,12 +1,11 @@
 import { Role } from './Role';
-import { Outil } from './Outil';
-import { Publication } from './Publication';
 import { Evenement } from './Evenement';
+import { Publication } from './Publication';
+import { Outil } from './Outil';
 import { Laboratoire } from './Laboratoire';
 
-export class Membre{
+export class MembreReturn{
     constructor(){}
-    id:number;
     publicID:string;
     cin:string;
     nom:string;
@@ -15,9 +14,7 @@ export class Membre{
     cv:string;
     photo:string; //7ata ba3d
     email:string;
-    password:string;
     laboratoire:Laboratoire;
-    activated:boolean=true;
     roles:Role[];
     evts:Evenement[];
     pubs:Publication[];

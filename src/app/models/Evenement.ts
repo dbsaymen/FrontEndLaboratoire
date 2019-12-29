@@ -4,7 +4,7 @@ export class Evenement{
     constructor(){}
     id:number;
     nom:string;
-    dateEvt:Date;
+    dateEVT:Date;
     lieu:string;
-    listOrganisateurs:Membre[];
+    organisateurs:Membre[];
 }
