@@ -2,9 +2,9 @@ import {Injectable} from '@angular/core';
 import {MembreReturn} from '../models/MembreReturn';
 import {HttpHeaders, HttpClient, HttpParams} from '@angular/common/http';
 import {environment} from 'src/environments/environment';
-import {Etudiant} from '../models/Etudiant';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class LoginService {
 
   UserInfo: MembreReturn = null;
 
-  constructor(private http: HttpClient,private router: Router) {
+  constructor(private http: HttpClient,private router: Router,private storageService:StorageService) {
   }
 
   TryLogin(email: String, password: String): Observable<MembreReturn> {
@@ -30,10 +30,17 @@ export class LoginService {
   }
   LogOut(){
     this.UserInfo=null;
+    this.storageService.remove("userInfo");
+    this.storageService.remove("customerData");
   }
   LogIn(email: String, password: String) {
     this.TryLogin(email, password).subscribe((data: MembreReturn) => {
       this.UserInfo = data;
+      this.storageService.write("userInfo",this.UserInfo);
+      this.storageService.write("customerData",{
+        "email":email,
+        "password":password
+      });
       this.router.navigate(['/user']);
     }
     ,err=>{
@@ -42,10 +49,10 @@ export class LoginService {
     );
   }
   isLoggedin():boolean{
-    if(this.UserInfo==null) return false;
+    if(!this.storageService.isExist("userInfo")) return false;
     return true;
   }
   getUserInfo():MembreReturn{
-    return this.UserInfo;
+    return this.storageService.read("userInfo");
   }
 }
