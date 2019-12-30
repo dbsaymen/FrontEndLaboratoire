@@ -15,7 +15,9 @@ import {UserDetailsComponent} from './component/user-details/user-details.compon
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'publications', component: PublicationsComponent },
+  { path: 'publications/:id', component: PublicationsComponent },
   { path: 'events', component: EventsComponent },
+  { path: 'events/:id', component: EventsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'members', component: MembersComponent },
   { path: 'contact', component: ContactPageComponent },
