@@ -13,7 +13,7 @@ export class MemberPageComponent implements OnInit {
   constructor(private loginService :LoginService,private router: Router) { }
 
   ngOnInit() {
-    console.log("hhhhhhh")
+    
 
   }
 }

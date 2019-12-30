@@ -26,7 +26,7 @@
           <h1><strong>Teachers</strong></h1>
           <ul id="thumbs" class="slides portfolio">
             <li class="item-thumbs span4 design" data-id="id-0" *ngFor="let enseigant of enseigants">
-              <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="{{baseURL}}/{{enseigant.publicID}}">
+              <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" [routerLink]="enseigant.publicID">
                 <span class="overlay-img"></span>
                 <span class="overlay-img-thumb font-icon-plus"></span>
               </a>
@@ -40,7 +40,7 @@
           <h1><strong>Student</strong></h1>
           <ul id="thumbs" class="slides portfolio">
             <li class="item-thumbs span4 design" data-id="id-0" *ngFor="let etudiant of etudiants">
-              <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="{{baseURL}}/{{etudiant.publicID}}">
+              <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" [routerLink]="etudiant.publicID">
                 <span class="overlay-img"></span>
                 <span class="overlay-img-thumb font-icon-plus"></span>
               </a>
@@ -52,7 +52,7 @@
               <p><strong>Date de naissance:</strong> <span style="margin-left: 15px ">{{etudiant.dateNaissance}}</span> </p>
             </li>  
             <li class="item-thumbs span4 design" data-id="id-0" *ngFor="let etudiant of etudiants">
-              <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="{{baseURL}}/{{etudiant.publicID}}">
+              <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" [routerLink]="etudiant.publicID">
                 <span class="overlay-img"></span>
                 <span class="overlay-img-thumb font-icon-plus"></span>
               </a>
