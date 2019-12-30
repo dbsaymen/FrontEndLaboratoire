@@ -13,8 +13,11 @@ import { PublicationsComponent } from './component/publications/publications.com
 import { EventsComponent } from './component/events/events.component';
 import { AboutComponent } from './component/about/about.component';
 import { LeftSideBarComponent } from './component/left-side-bar/left-side-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './component/login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { MemberPageComponent } from './component/member-page/member-page.component';
 import { SharedModule } from './shared/shared.module';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +30,17 @@ import { SharedModule } from './shared/shared.module';
     PublicationsComponent,
     EventsComponent,
     AboutComponent,
-    LeftSideBarComponent
+    LeftSideBarComponent,
+    LoginComponent,
+    MemberPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
