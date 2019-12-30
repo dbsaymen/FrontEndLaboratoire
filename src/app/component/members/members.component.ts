@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MembreService} from '../../service/membre.service';
 
 @Component({
   selector: 'app-members',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private memberService:MembreService) { }
 
   ngOnInit() {
+    this.memberService.findAll().subscribe(data =>{
+      console.log(data);
+    })
   }
 
 }
