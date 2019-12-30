@@ -20,22 +20,19 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <ul class="portfolio-categ filter">
-          <li class="all active"><a href="#">All</a></li>
-          <li class="student"><a href="#" title="">Students</a></li>
-          <li class="teacher"><a href="#" title="">Teachers</a></li>
-        </ul>
         <div class="clearfix">
         </div>
         <div class="row">
           <section id="projects">
             <ul id="thumbs" class="portfolio">
-              <li class="item-thumbs span4 design" data-id="id-0" data-type="student" *ngFor="let membre of membres">
+              <li class="item-thumbs span4 design" data-id="id-0" *ngFor="let membre of membres">
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-01-full.jpg">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
                 </a>
                 <img src="../../../assets/flatten/img/dummies/team3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                <p><strong>Role:</strong> <span style="margin-left: 15px ">{{membre.type=="etudiant"?"Student" : "Teacher"}}</span> </p>
+                <p><strong>Email:</strong> <span style="margin-left: 15px ">{{membre.email}}</span> </p>
                 <h3>{{membre.nom}}<strong> {{membre.prenom}}</strong></h3>
                 <h6>Date de naissance: {{membre.dateNaissance}}</h6>
               </li>   
