@@ -30,60 +30,15 @@
         <div class="row">
           <section id="projects">
             <ul id="thumbs" class="portfolio">
-              <li class="item-thumbs span4 design" data-id="id-0" data-type="student">
+              <li class="item-thumbs span4 design" data-id="id-0" data-type="student" *ngFor="let membre of membres">
                 <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-01-full.jpg">
                   <span class="overlay-img"></span>
                   <span class="overlay-img-thumb font-icon-plus"></span>
                 </a>
                 <img src="../../../assets/flatten/img/dummies/team3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                <h3>First Name <strong>Last Name</strong></h3>
-                <h6>this is all informations</h6>
-              </li>
-              <li class="item-thumbs span4 design" data-id="id-1" data-type="student">
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-02-full.jpg">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <img src="../../../assets/flatten/img/dummies/team1.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                <h3>First Name <strong>Last Name</strong></h3>
-                <h6>this is all informations</h6>
-              </li>
-              <li class="item-thumbs span4 photography" data-id="id-4" data-type="teacher">
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-05-full.jpg">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <img src="../../../assets/flatten/img/dummies/team2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                <h3>First Name <strong>Last Name</strong></h3>
-                <h6>this is all informations</h6>
-              </li>
-              <li class="item-thumbs span4 photography" data-id="id-5" data-type="student">
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-06-full.jpg">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <img src="../../../assets/flatten/img/dummies/team3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                <h3>First Name <strong>Last Name</strong></h3>
-                <h6>this is all informations</h6>
-              </li>
-              <li class="item-thumbs span4 design" data-id="id-0" data-type="teacher">
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-07-full.jpg">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <img src="../../../assets/flatten/img/dummies/team4.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                <h3>First Name <strong>Last Name</strong></h3>
-                <h6>this is all informations</h6>
-              </li>
-              <li class="item-thumbs span4 design" data-id="id-0" data-type="student">
-                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="../../../assets/flatten/img/works/full/image-08-full.jpg">
-                  <span class="overlay-img"></span>
-                  <span class="overlay-img-thumb font-icon-plus"></span>
-                </a>
-                <img src="../../../assets/flatten/img/dummies/team2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                <h3>First Name <strong>Last Name</strong></h3>
-                <h6>This is all informations</h6>
-              </li>
+                <h3>{{membre.nom}}<strong> {{membre.prenom}}</strong></h3>
+                <h6>Date de naissance: {{membre.dateNaissance}}</h6>
+              </li>   
             </ul>
           </section>
         </div>

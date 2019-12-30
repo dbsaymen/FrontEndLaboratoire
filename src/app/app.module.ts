@@ -13,7 +13,7 @@ import { PublicationsComponent } from './component/publications/publications.com
 import { EventsComponent } from './component/events/events.component';
 import { AboutComponent } from './component/about/about.component';
 import { LeftSideBarComponent } from './component/left-side-bar/left-side-bar.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +30,8 @@ import { LeftSideBarComponent } from './component/left-side-bar/left-side-bar.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

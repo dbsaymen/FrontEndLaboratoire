@@ -13,6 +13,7 @@ export class EnseignantChercheurService {
     return this.http.post<EnseignantChercheur>(environment.baseUrl + "/members/enseignant",enseignant,{
       headers:new HttpHeaders({
           'content-type':'application/json'
+          //'authorization':
       })
   });
   }
