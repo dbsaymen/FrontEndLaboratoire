@@ -13,7 +13,8 @@ import { PublicationsComponent } from './component/publications/publications.com
 import { EventsComponent } from './component/events/events.component';
 import { AboutComponent } from './component/about/about.component';
 import { LeftSideBarComponent } from './component/left-side-bar/left-side-bar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

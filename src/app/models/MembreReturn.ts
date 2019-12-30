@@ -3,6 +3,8 @@ import {Evenement} from './Evenement';
 import {Publication} from './Publication';
 import {Outil} from './Outil';
 import {Laboratoire} from './Laboratoire';
+import { Etudiant } from './Etudiant';
+import { EnseignantChercheur } from './EnseignantChercheur';
 
 export class MembreReturn {
   constructor() {
@@ -22,6 +24,13 @@ export class MembreReturn {
   pubs: Publication[];
   outils: Outil[];
   type:String;
+  etablissement:string;
+  grade:string;
+  encadre:Etudiant[]; 
+  dateInscription:Date;
+  sujet:string;
+  diplome:string;
+  encadrant:EnseignantChercheur;
 
 
 

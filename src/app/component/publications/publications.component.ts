@@ -12,7 +12,8 @@ export class PublicationsComponent implements OnInit {
   constructor(private publicationService:PublicationService) { }
 
   ngOnInit() {
-    this.publicationService.findAll().subscribe(data=>{
+    this.publicationService.findAll()
+    .subscribe((data:Publication[])=>{
       this.pubs=data;
     })
   }

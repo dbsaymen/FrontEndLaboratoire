@@ -3,6 +3,8 @@ import { Outil } from './Outil';
 import { Publication } from './Publication';
 import { Evenement } from './Evenement';
 import { Laboratoire } from './Laboratoire';
+import { Etudiant } from './Etudiant';
+import { EnseignantChercheur } from './EnseignantChercheur';
 
 export class Membre{
     constructor(){}
@@ -22,5 +24,4 @@ export class Membre{
     evts:Evenement[];
     pubs:Publication[];
     outils:Outil[];
-
 }

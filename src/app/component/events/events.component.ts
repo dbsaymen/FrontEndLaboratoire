@@ -13,9 +13,12 @@ export class EventsComponent implements OnInit {
   constructor(private evenementService:EvenementService) { }
 
   ngOnInit() {
-    this.evenementService.findAll().subscribe(data=>{
+    this.evenementService.findAll()
+    .subscribe((data:Evenement[])=>{
       this.ev=data;
     })
   }
+
+  
 
 }
