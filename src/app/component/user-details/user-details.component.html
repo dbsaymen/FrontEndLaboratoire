@@ -23,7 +23,7 @@
         <article>
           <div class="">
             <div class="post-heading">
-              <h3><a href="#">This is an example of portfolio detail</a></h3>
+              <h1> <strong>{{this.member.nom+' '+this.member.prenom}}</strong></h1>
             </div>
             <!-- start flexslider -->
             <div >
@@ -46,14 +46,13 @@
           <div class="widget">
             <h5 class="widgetheading">Project information</h5>
             <ul class="folio-detail">
-              <li><label>Category :</label> Web design</li>
-              <li><label>Client :</label> ASU Company</li>
-              <li><label>Project date :</label> 26 March, 2013</li>
-              <li><label>Project URL :</label><a href="#">www.projectsiteurl.com</a></li>
+              <li><label>Email :</label> {{this.member.email}}</li>
+              <li><label>Born :</label>  {{this.member.dateNaissance}}</li>
+              <li><label>Lab :</label>  {{this.member.laboratoire.nom}}</li>
             </ul>
           </div>
           <div class="widget">
-            <h5 class="widgetheading">Text widget</h5>
+            <h5 class="widgetheading">Description</h5>
             <p>
               Lorem ipsum dolor sit amet, unum suscipiantur te cum, vide magna ea eam. At eos wisi tractatos temporibus. Ne has omnis harum. Ei mea graece delenit nominati. Ut dolore albucius torquatos vel, choro gubergren no mel.
             </p>
