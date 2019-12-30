@@ -14,6 +14,9 @@ import { EventsComponent } from './component/events/events.component';
 import { AboutComponent } from './component/about/about.component';
 import { LeftSideBarComponent } from './component/left-side-bar/left-side-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './component/login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { MemberPageComponent } from './component/member-page/member-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +29,15 @@ import { HttpClientModule } from '@angular/common/http';
     PublicationsComponent,
     EventsComponent,
     AboutComponent,
-    LeftSideBarComponent
+    LeftSideBarComponent,
+    LoginComponent,
+    MemberPageComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
