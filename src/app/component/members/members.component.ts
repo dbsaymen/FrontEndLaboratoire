@@ -19,6 +19,8 @@ export class MembersComponent implements OnInit {
   }
   
   findAll(){
+    this.etudiants = [];
+    this.enseigants = [];
     this.membreService.findAll()
     .subscribe((data: MembreReturn[]) => {
       for (let membre of data){

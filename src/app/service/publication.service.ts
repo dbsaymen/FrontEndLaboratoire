@@ -45,7 +45,7 @@ export class PublicationService {
   findByType(type:string){
     return this.http.get(environment.baseUrl + '/publication/type',{params:{type:type}});
   }
-//?????????
+
   findByDateApparitionBetween(d1:Date,d2:Date){
   }
 }

@@ -15,7 +15,6 @@ export class PublicationsComponent implements OnInit {
     this.publicationService.findAll()
     .subscribe((data:Publication[])=>{
       this.pubs=data;
-      console.log(data)
     })
   }
 
