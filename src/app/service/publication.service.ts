@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Publication } from '../models/Publication';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,12 @@ export class PublicationService {
   constructor(private http:HttpClient) { }
 // Crud sur les Publications
 
-  findAll(){
-    return this.http.get(environment.baseUrl + '/publications');
+  findAll():Observable<Publication[]>{
+    return this.http.get<Publication[]>(environment.baseUrl + '/pulication/all');
   }
 
   delete(publication:Publication){
-    return this.http.delete(environment.baseUrl + "/publications/"+publication.id);
+    return this.http.delete(environment.baseUrl + "/publication/"+publication.id);
   }
 
   addPublication(publication:Publication){

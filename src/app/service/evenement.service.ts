@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Evenement } from '../models/Evenement';
+import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,8 +10,8 @@ export class EvenementService {
 
   constructor(private http: HttpClient) { }
 
-  findAll(){
-    return this.http.get(environment.baseUrl + '/evenements');
+  findAll():Observable<Evenement[]>{
+    return this.http.get<Evenement[]>(environment.baseUrl + '/evenement/all');
   }
 
   findByNom(nom:string){
