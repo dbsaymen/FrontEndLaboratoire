@@ -13,7 +13,7 @@ export class PublicationService {
 // Crud sur les Publications
 
   findAll():Observable<Publication[]>{
-    return this.http.get<Publication[]>(environment.baseUrl + '/pulication/all');
+    return this.http.get<Publication[]>(environment.baseUrl + '/publication/all');
   }
 
   delete(publication:Publication){

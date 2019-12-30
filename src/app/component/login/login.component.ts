@@ -10,12 +10,13 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   checkoutForm;
+  ErrorLogin=false;
 
   ngOnInit() {
   }
   constructor(private loginService:LoginService,private formBuilder: FormBuilder,private router: Router) {
     if(this.loginService.isLoggedin()){
-      this.router.navigate(['/user'])
+      this.router.navigate(['/user/profile'])
     }
     this.checkoutForm = this.formBuilder.group({
       email: new FormControl(''),
@@ -28,6 +29,8 @@ export class LoginComponent implements OnInit {
     // Process checkout data here
     console.log(customerData.password.toString());
     this.loginService.LogIn(customerData.email.toString(),customerData.password.toString())
+    if(!this.loginService.isLoggedin())
+      this.ErrorLogin =true;
 
   }
 

@@ -41,7 +41,7 @@ export class LoginService {
         "email":email,
         "password":password
       });
-      this.router.navigate(['/user']);
+      this.router.navigate(['/user/profile']);
     }
     ,err=>{
       console.log("Faild To Login")

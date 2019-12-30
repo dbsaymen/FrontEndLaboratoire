@@ -25,7 +25,7 @@
         <div class="headnav">
           <ul>
             <li><a *ngIf="!loginService.isLoggedin()" routerLink="/login" data-toggle="modal"><i class="icon-user"></i> Sign in</a></li>
-            <li><a *ngIf="loginService.isLoggedin()" routerLink="/user" data-toggle="modal"><i class="icon-user"></i> {{loginService.getUserInfo().email}}</a></li>
+            <li><a *ngIf="loginService.isLoggedin()" routerLink="/user/profile" data-toggle="modal"><i class="icon-user"></i> {{loginService.getUserInfo().email}}</a></li>
             <li><a *ngIf="loginService.isLoggedin()" routerLink="/" (click)="loginService.LogOut()" data-toggle="modal"><i class="icon-user"></i> Log Out</a></li>
 
           </ul>
