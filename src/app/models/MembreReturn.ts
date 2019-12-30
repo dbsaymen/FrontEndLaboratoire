@@ -31,7 +31,4 @@ export class MembreReturn {
   sujet:string;
   diplome:string;
   encadrant:EnseignantChercheur;
-
-
-
 }

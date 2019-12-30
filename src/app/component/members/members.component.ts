@@ -14,32 +14,31 @@ declare var jQuery: any;
 export class MembersComponent implements OnInit {
   etudiants:MembreReturn[] = [];
   enseigants:MembreReturn[] = [];
+  baseURL="http://localhost:4200/members";
 
   constructor(private membreService: MembreService) {
   }
 
   ngOnInit() {
-    this.box();
     this.findAll();
+    //this.box();
+    
     
   }
   box(){
     jQuery(window).load(function() {
-      jQuery('#content .featured_carousel').flexslider({
+      jQuery('.flexslider').flexslider({
         animation: "slide",
         animationLoop: false,
-        slideshow: false,
         itemWidth: 210,
-        minItems: Utils.getGridSize(), // use function to pull in initial value
-        maxItems: Utils.getGridSize() // use function to pull in initial value
+        itemMargin: 5
       });
-      });
+    });
   }
   findAll(){
     this.membreService.findAll()
     .subscribe((data: MembreReturn[]) => {
       for (let membre of data){
-        console.log(membre.grade);
         if (membre.type=="etudiant")
           this.etudiants.push(membre);
         else

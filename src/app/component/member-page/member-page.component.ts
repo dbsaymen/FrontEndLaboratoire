@@ -13,10 +13,7 @@ export class MemberPageComponent implements OnInit {
   constructor(private loginService :LoginService,private router: Router) { }
 
   ngOnInit() {
-    if(this.loginService.isLoggedin())
-      this.member=this.loginService.getUserInfo();
-    else
-      this.router.navigate(['/login']);
-  }
+    console.log("hhhhhhh")
 
+  }
 }

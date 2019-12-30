@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'members', component: MembersComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'user', component: MemberPageComponent },
+  { path: 'members/:publicID', component: MemberPageComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
