@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PublicationService} from '../../service/publication.service';
+import {Publication} from '../../models/Publication';
 
 @Component({
   selector: 'app-publications',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./publications.component.scss']
 })
 export class PublicationsComponent implements OnInit {
-
-  constructor() { }
+  pubs:Publication[];
+  constructor(private publicationService:PublicationService) { }
 
   ngOnInit() {
+    this.publicationService.findAll().subscribe(data=>{
+      this.pubs=data;
+    })
   }
 
 }

@@ -1,10 +1,11 @@
-import { Membre } from './Membre';
+import {Membre} from './Membre';
 
-export class Evenement{
-    constructor(){}
-    id:number;
-    nom:string;
-    dateEVT:Date;
-    lieu:string;
-    organisateurs:Membre[];
+export class Evenement {
+  constructor() {
+  }
+
+  id: number;
+  nom: string;
+  dateEVT: Date;
+  lieu: string;
 }
