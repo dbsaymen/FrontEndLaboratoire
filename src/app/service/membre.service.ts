@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from 'src/environments/environment';
+import {MembreReturn} from '../models/MembreReturn';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +31,9 @@ export class MembreService {
 
   findByCin(cin: string) {
     return this.http.get(environment.baseUrl + '/members/search/cin', {params: {cin: cin}});
+  }
+  findByPublicID(publicID: string):Observable<MembreReturn> {
+    return this.http.get<MembreReturn>(environment.baseUrl + '/members/'+publicID, {});
   }
 
   findByEmail(email: string) {

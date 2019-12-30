@@ -18,6 +18,9 @@ import { LoginComponent } from './component/login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MemberPageComponent } from './component/member-page/member-page.component';
 import { SharedModule } from './shared/shared.module';
+import { PublicationDetailsComponent } from './component/publication-details/publication-details.component';
+import { EventDetailsComponent } from './component/event-details/event-details.component';
+import { UserDetailsComponent } from './component/user-details/user-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ import { SharedModule } from './shared/shared.module';
     AboutComponent,
     LeftSideBarComponent,
     LoginComponent,
-    MemberPageComponent
+    MemberPageComponent,
+    PublicationDetailsComponent,
+    EventDetailsComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

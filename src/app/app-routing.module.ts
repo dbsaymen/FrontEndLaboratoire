@@ -9,6 +9,7 @@ import {MembersComponent} from './component/members/members.component';
 import {AboutComponent} from './component/about/about.component';
 import {LoginComponent} from './component/login/login.component';
 import {MemberPageComponent} from './component/member-page/member-page.component';
+import {UserDetailsComponent} from './component/user-details/user-details.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'user', component: MemberPageComponent },
+  { path: 'members/:id', component: UserDetailsComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
