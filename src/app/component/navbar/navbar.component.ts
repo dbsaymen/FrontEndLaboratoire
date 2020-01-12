@@ -11,7 +11,15 @@ export class NavbarComponent implements OnInit {
   constructor(private loginService:LoginService) {
 
   }
-
+  isLoggedin(){
+    return this.loginService.isLoggedin();
+  }
+  LogOut(){
+    this.loginService.LogOut();
+  }
+  getUserInfo(){
+    return this.loginService.getUserInfo();
+  }
   ngOnInit() {
   }
 

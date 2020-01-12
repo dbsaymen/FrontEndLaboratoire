@@ -10,11 +10,17 @@ import {EtudiantReturn} from '../../../models/EtudiantReturn';
   styleUrls: ['./myprofile.component.scss']
 })
 export class MyprofileComponent implements OnInit {
-  member:EnseignantChercheurReturn|EtudiantReturn;
+  member:any;
   constructor(private loginService:LoginService) { }
 
   ngOnInit() {
-    this.member=this.loginService.getUserInfo();
+    if (this.loginService.getUserInfo().type=='etudiant'){
+      this.member = new EtudiantReturn();
+      this.member= this.loginService.getUserInfo();
+    }else {
+      this.member = new EnseignantChercheurReturn();
+      this.member= this.loginService.getUserInfo();
+    }
   }
 
 }

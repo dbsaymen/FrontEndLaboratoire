@@ -14,6 +14,7 @@ export class Membre{
     nom:string;
     prenom:string;
     dateNaissance:Date;
+
     cv:string;
     photo:string; //7ata ba3d
     email:string;
