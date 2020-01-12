@@ -44,13 +44,13 @@ export class LoginService {
       this.router.navigate(['/user/profile']);
     }
     ,err=>{
-      console.log("Faild To Login")
+      //console.log("Faild To Login")
       }
     );
   }
   isLoggedin():boolean{
-    if(!this.storageService.isExist("userInfo")) return false;
-    return true;
+    if(this.storageService.isExist("userInfo")) return true;
+    return false;
   }
   getUserInfo():EnseignantChercheurReturn|EtudiantReturn{
     return this.storageService.read("userInfo");

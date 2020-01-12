@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  checkoutForm;
+  checkoutForm:any;
   ErrorLogin=false;
 
   ngOnInit() {
@@ -28,13 +28,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(customerData) {
     // Process checkout data here
-    console.log(customerData.password.toString());
-    this.loginService.LogIn(customerData.email.toString(),customerData.password.toString())
-    // @ts-ignore
-    waits(1000);
-    if(!this.loginService.isLoggedin())
-      this.ErrorLogin =true;
 
+    this.loginService.LogIn(this.checkoutForm.get("email").value,this.checkoutForm.get("password").value)
+    if(!this.loginService.isLoggedin())
+      this.ErrorLogin=true;
   }
 
 }
