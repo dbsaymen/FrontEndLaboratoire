@@ -32,6 +32,7 @@ export class PublicationService {
     return this.http.put<Publication>(environment.baseUrl + "/publication/"+publication.id,publication,{
       headers:new HttpHeaders({
           'content-type':'application/json'
+
     })
   });
   }
